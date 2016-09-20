@@ -13,6 +13,12 @@ RSpec.feature "Users can create new project" do
 
     expect(page).to have_content "Project has been created."
 
+    project = Project.find_by(name: "Sublime Text 3")
+    expect(page.current_url).to eq project_url(project)
+
+    title = "Sublime Text 3 - Projects - Ticketee"
+    expect(page).to have_title title
+
   end
 end
 
