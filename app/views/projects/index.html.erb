@@ -6,6 +6,10 @@
       <%= link_to "New Project", new_project_path, 
       class: "new" %>
     </li>
+
+    <li class="<%= "active" if current_page? "/users/sign_up" %>">
+      <%= link_to "Sign up", new_user_registration_path %>
+    </li>
   </ul>
 </header>
 
