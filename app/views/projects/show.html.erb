@@ -9,7 +9,7 @@
       class: "edit" %>
     </li>
     <li>
-      <%= link_to "Delete Project", project_path(@project), 
+      <%= link_to "Delete Project", admin_project_path(@project), 
       method: :delete, data: { confirm: "Are you sure?" },
       class: "delete" %>
     </li>
